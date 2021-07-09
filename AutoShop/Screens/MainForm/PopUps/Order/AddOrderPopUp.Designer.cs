@@ -34,12 +34,11 @@ namespace AutoShop.Screens.MainForm.PopUps.OrderPopUp
             this.TypeTextBox = new System.Windows.Forms.TextBox();
             this.DescLabel = new System.Windows.Forms.Label();
             this.TypeLabel = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(16, 127);
+            this.SubmitButton.Location = new System.Drawing.Point(16, 93);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(356, 32);
             this.SubmitButton.TabIndex = 12;
@@ -85,22 +84,11 @@ namespace AutoShop.Screens.MainForm.PopUps.OrderPopUp
             this.TypeLabel.Text = "Type";
             this.TypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.Location = new System.Drawing.Point(123, 79);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(140, 30);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Is completed?";
-            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // AddOrderPopUp
             // 
             this.AcceptButton = this.SubmitButton;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(384, 170);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(384, 137);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.DescTextBox);
             this.Controls.Add(this.TypeTextBox);
@@ -123,6 +111,5 @@ namespace AutoShop.Screens.MainForm.PopUps.OrderPopUp
         private System.Windows.Forms.TextBox TypeTextBox;
         private System.Windows.Forms.Label DescLabel;
         private System.Windows.Forms.Label TypeLabel;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

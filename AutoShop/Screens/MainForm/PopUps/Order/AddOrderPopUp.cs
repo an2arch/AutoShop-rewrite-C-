@@ -23,8 +23,7 @@ namespace AutoShop.Screens.MainForm.PopUps.OrderPopUp
                 !string.IsNullOrEmpty(DescTextBox.Text))
             {
                 Utility.OrderUtility.addOrderToStorage(TypeTextBox.Text, 
-                                                       DescTextBox.Text, 
-                                                       checkBox1.Checked);
+                                                       DescTextBox.Text);
                 Close();
             }
         }

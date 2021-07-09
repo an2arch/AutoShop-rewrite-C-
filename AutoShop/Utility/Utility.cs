@@ -122,9 +122,9 @@ namespace AutoShop.Utility
     {
         static private Storage.Storage storage = Storage.Storage.getStorage();
 
-        static public void addOrderToStorage(string type, string description, bool completed)
+        static public void addOrderToStorage(string type, string description)
         {
-            Order newOrder = new Order(type, description, completed);
+            Order newOrder = new Order(type, description, false);
             GCHandle handle = GCHandle.Alloc(newOrder);
             IntPtr orderPtr = (IntPtr) handle;
             storage.dispatch(new Storage.Action.Action(
