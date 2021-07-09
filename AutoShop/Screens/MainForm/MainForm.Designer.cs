@@ -33,52 +33,47 @@ namespace AutoShop.Screens.MainForm
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.TabControl = new System.Windows.Forms.TabControl();
             this.OrdersTabPage = new System.Windows.Forms.TabPage();
-            this.SparesTabPage = new System.Windows.Forms.TabPage();
-            this.AccountsTabPage = new System.Windows.Forms.TabPage();
-            this.DeleteAccountButton = new System.Windows.Forms.Button();
-            this.EditAccountButton = new System.Windows.Forms.Button();
-            this.AddAccountButton = new System.Windows.Forms.Button();
-            this.AccountsDataGrid = new System.Windows.Forms.DataGridView();
-            this.ExitTabPage = new System.Windows.Forms.TabPage();
-            this.OrdersDataGrid = new System.Windows.Forms.DataGridView();
             this.DeleteOrderButton = new System.Windows.Forms.Button();
+            this.CompleteButton = new System.Windows.Forms.Button();
             this.EditOrderButton = new System.Windows.Forms.Button();
             this.AddOrderButton = new System.Windows.Forms.Button();
-            this.CompleteButton = new System.Windows.Forms.Button();
-            this.DeleteSpareButton = new System.Windows.Forms.Button();
-            this.EditSpareButton = new System.Windows.Forms.Button();
-            this.AddSpareButton = new System.Windows.Forms.Button();
-            this.SparesDataGrid = new System.Windows.Forms.DataGridView();
-            this.NameSpareCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountSpareCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoginAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PasswordAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AccessAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrdersDataGrid = new System.Windows.Forms.DataGridView();
             this.IdOrderCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TypeOrderCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescOrderCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CompletedOrderCol = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SparesTabPage = new System.Windows.Forms.TabPage();
+            this.DeleteSpareButton = new System.Windows.Forms.Button();
+            this.EditSpareButton = new System.Windows.Forms.Button();
+            this.AddSpareButton = new System.Windows.Forms.Button();
+            this.SparesDataGrid = new System.Windows.Forms.DataGridView();
             this.IdSpareCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameSpareCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TypeSpareCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountSpareCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.spareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AccountsTabPage = new System.Windows.Forms.TabPage();
+            this.DeleteAccountButton = new System.Windows.Forms.Button();
+            this.EditAccountButton = new System.Windows.Forms.Button();
+            this.AddAccountButton = new System.Windows.Forms.Button();
+            this.AccountsDataGrid = new System.Windows.Forms.DataGridView();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accessDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExitTabPage = new System.Windows.Forms.TabPage();
+            this.IdAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoginAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasswordAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AccessAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabControl.SuspendLayout();
             this.OrdersTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SparesTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SparesDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spareBindingSource)).BeginInit();
             this.AccountsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountsDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SparesDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spareBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +109,106 @@ namespace AutoShop.Screens.MainForm
             this.OrdersTabPage.UseVisualStyleBackColor = true;
             this.OrdersTabPage.Enter += new System.EventHandler(this.OrdersTabPage_Enter);
             // 
+            // DeleteOrderButton
+            // 
+            this.DeleteOrderButton.Location = new System.Drawing.Point(7, 119);
+            this.DeleteOrderButton.Name = "DeleteOrderButton";
+            this.DeleteOrderButton.Size = new System.Drawing.Size(205, 31);
+            this.DeleteOrderButton.TabIndex = 3;
+            this.DeleteOrderButton.Text = "Delete order";
+            this.DeleteOrderButton.UseVisualStyleBackColor = true;
+            this.DeleteOrderButton.Click += new System.EventHandler(this.DeleteOrderButton_Click);
+            // 
+            // CompleteButton
+            // 
+            this.CompleteButton.Location = new System.Drawing.Point(7, 82);
+            this.CompleteButton.Name = "CompleteButton";
+            this.CompleteButton.Size = new System.Drawing.Size(205, 31);
+            this.CompleteButton.TabIndex = 2;
+            this.CompleteButton.Text = "Complete order";
+            this.CompleteButton.UseVisualStyleBackColor = true;
+            this.CompleteButton.Click += new System.EventHandler(this.CompleteButton_Click);
+            // 
+            // EditOrderButton
+            // 
+            this.EditOrderButton.Location = new System.Drawing.Point(7, 45);
+            this.EditOrderButton.Name = "EditOrderButton";
+            this.EditOrderButton.Size = new System.Drawing.Size(205, 31);
+            this.EditOrderButton.TabIndex = 1;
+            this.EditOrderButton.Text = "Edit order";
+            this.EditOrderButton.UseVisualStyleBackColor = true;
+            this.EditOrderButton.Click += new System.EventHandler(this.EditOrderButton_Click);
+            // 
+            // AddOrderButton
+            // 
+            this.AddOrderButton.Location = new System.Drawing.Point(7, 8);
+            this.AddOrderButton.Name = "AddOrderButton";
+            this.AddOrderButton.Size = new System.Drawing.Size(205, 31);
+            this.AddOrderButton.TabIndex = 0;
+            this.AddOrderButton.Text = "Add new order";
+            this.AddOrderButton.UseVisualStyleBackColor = true;
+            this.AddOrderButton.Click += new System.EventHandler(this.AddOrderButton_Click);
+            // 
+            // OrdersDataGrid
+            // 
+            this.OrdersDataGrid.AllowUserToAddRows = false;
+            this.OrdersDataGrid.AllowUserToDeleteRows = false;
+            this.OrdersDataGrid.AllowUserToOrderColumns = true;
+            this.OrdersDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrdersDataGrid.AutoGenerateColumns = false;
+            this.OrdersDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.OrdersDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.OrdersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrdersDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdOrderCol,
+            this.TypeOrderCol,
+            this.DescOrderCol,
+            this.CompletedOrderCol});
+            this.OrdersDataGrid.DataSource = this.orderBindingSource;
+            this.OrdersDataGrid.Location = new System.Drawing.Point(218, 0);
+            this.OrdersDataGrid.Name = "OrdersDataGrid";
+            this.OrdersDataGrid.ReadOnly = true;
+            this.OrdersDataGrid.Size = new System.Drawing.Size(513, 431);
+            this.OrdersDataGrid.TabIndex = 2;
+            // 
+            // IdOrderCol
+            // 
+            this.IdOrderCol.DataPropertyName = "Id";
+            this.IdOrderCol.HeaderText = "Id";
+            this.IdOrderCol.Name = "IdOrderCol";
+            this.IdOrderCol.ReadOnly = true;
+            this.IdOrderCol.Width = 49;
+            // 
+            // TypeOrderCol
+            // 
+            this.TypeOrderCol.DataPropertyName = "Type";
+            this.TypeOrderCol.HeaderText = "Type";
+            this.TypeOrderCol.Name = "TypeOrderCol";
+            this.TypeOrderCol.ReadOnly = true;
+            this.TypeOrderCol.Width = 71;
+            // 
+            // DescOrderCol
+            // 
+            this.DescOrderCol.DataPropertyName = "Description";
+            this.DescOrderCol.HeaderText = "Description";
+            this.DescOrderCol.Name = "DescOrderCol";
+            this.DescOrderCol.ReadOnly = true;
+            this.DescOrderCol.Width = 123;
+            // 
+            // CompletedOrderCol
+            // 
+            this.CompletedOrderCol.DataPropertyName = "IsCompleted";
+            this.CompletedOrderCol.HeaderText = "Is Completed?";
+            this.CompletedOrderCol.Name = "CompletedOrderCol";
+            this.CompletedOrderCol.ReadOnly = true;
+            this.CompletedOrderCol.Width = 122;
+            // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(AutoShop.Models.Order);
+            // 
             // SparesTabPage
             // 
             this.SparesTabPage.Controls.Add(this.DeleteSpareButton);
@@ -129,6 +224,103 @@ namespace AutoShop.Screens.MainForm
             this.SparesTabPage.Text = "Spares";
             this.SparesTabPage.UseVisualStyleBackColor = true;
             this.SparesTabPage.Enter += new System.EventHandler(this.SparesTabPage_Enter);
+            // 
+            // DeleteSpareButton
+            // 
+            this.DeleteSpareButton.Location = new System.Drawing.Point(7, 82);
+            this.DeleteSpareButton.Name = "DeleteSpareButton";
+            this.DeleteSpareButton.Size = new System.Drawing.Size(205, 31);
+            this.DeleteSpareButton.TabIndex = 2;
+            this.DeleteSpareButton.Text = "Delete spare";
+            this.DeleteSpareButton.UseVisualStyleBackColor = true;
+            this.DeleteSpareButton.Click += new System.EventHandler(this.DeleteSpareButton_Click);
+            // 
+            // EditSpareButton
+            // 
+            this.EditSpareButton.Location = new System.Drawing.Point(7, 45);
+            this.EditSpareButton.Name = "EditSpareButton";
+            this.EditSpareButton.Size = new System.Drawing.Size(205, 31);
+            this.EditSpareButton.TabIndex = 1;
+            this.EditSpareButton.Text = "Edit spare";
+            this.EditSpareButton.UseVisualStyleBackColor = true;
+            this.EditSpareButton.Click += new System.EventHandler(this.EditSpareButton_Click);
+            // 
+            // AddSpareButton
+            // 
+            this.AddSpareButton.Location = new System.Drawing.Point(7, 8);
+            this.AddSpareButton.Name = "AddSpareButton";
+            this.AddSpareButton.Size = new System.Drawing.Size(205, 31);
+            this.AddSpareButton.TabIndex = 0;
+            this.AddSpareButton.Text = "Add new spare";
+            this.AddSpareButton.UseVisualStyleBackColor = true;
+            this.AddSpareButton.Click += new System.EventHandler(this.AddSpareButton_Click);
+            // 
+            // SparesDataGrid
+            // 
+            this.SparesDataGrid.AllowUserToAddRows = false;
+            this.SparesDataGrid.AllowUserToDeleteRows = false;
+            this.SparesDataGrid.AllowUserToOrderColumns = true;
+            this.SparesDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SparesDataGrid.AutoGenerateColumns = false;
+            this.SparesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.SparesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.SparesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SparesDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdSpareCol,
+            this.NameSpareCol,
+            this.TypeSpareCol,
+            this.AmountSpareCol});
+            this.SparesDataGrid.DataSource = this.spareBindingSource;
+            this.SparesDataGrid.Location = new System.Drawing.Point(218, 0);
+            this.SparesDataGrid.Name = "SparesDataGrid";
+            this.SparesDataGrid.ReadOnly = true;
+            this.SparesDataGrid.Size = new System.Drawing.Size(513, 431);
+            this.SparesDataGrid.TabIndex = 7;
+            // 
+            // IdSpareCol
+            // 
+            this.IdSpareCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.IdSpareCol.DataPropertyName = "Id";
+            this.IdSpareCol.Frozen = true;
+            this.IdSpareCol.HeaderText = "Id";
+            this.IdSpareCol.Name = "IdSpareCol";
+            this.IdSpareCol.ReadOnly = true;
+            this.IdSpareCol.Width = 49;
+            // 
+            // NameSpareCol
+            // 
+            this.NameSpareCol.DataPropertyName = "Name";
+            this.NameSpareCol.Frozen = true;
+            this.NameSpareCol.HeaderText = "Name";
+            this.NameSpareCol.Name = "NameSpareCol";
+            this.NameSpareCol.ReadOnly = true;
+            this.NameSpareCol.Width = 80;
+            // 
+            // TypeSpareCol
+            // 
+            this.TypeSpareCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TypeSpareCol.DataPropertyName = "Type";
+            this.TypeSpareCol.Frozen = true;
+            this.TypeSpareCol.HeaderText = "Type";
+            this.TypeSpareCol.Name = "TypeSpareCol";
+            this.TypeSpareCol.ReadOnly = true;
+            this.TypeSpareCol.Width = 71;
+            // 
+            // AmountSpareCol
+            // 
+            this.AmountSpareCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.AmountSpareCol.DataPropertyName = "Amount";
+            this.AmountSpareCol.Frozen = true;
+            this.AmountSpareCol.HeaderText = "Amount";
+            this.AmountSpareCol.Name = "AmountSpareCol";
+            this.AmountSpareCol.ReadOnly = true;
+            this.AmountSpareCol.Width = 96;
+            // 
+            // spareBindingSource
+            // 
+            this.spareBindingSource.DataSource = typeof(AutoShop.Models.Spare);
             // 
             // AccountsTabPage
             // 
@@ -179,6 +371,7 @@ namespace AutoShop.Screens.MainForm
             // 
             this.AccountsDataGrid.AllowUserToAddRows = false;
             this.AccountsDataGrid.AllowUserToDeleteRows = false;
+            this.AccountsDataGrid.AllowUserToOrderColumns = true;
             this.AccountsDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -191,18 +384,17 @@ namespace AutoShop.Screens.MainForm
             this.NameAccountCol,
             this.LoginAccountCol,
             this.PasswordAccountCol,
-            this.AccessAccountCol,
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.loginDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.accessDataGridViewTextBoxColumn});
+            this.AccessAccountCol});
             this.AccountsDataGrid.DataSource = this.accountBindingSource;
             this.AccountsDataGrid.Location = new System.Drawing.Point(218, 0);
             this.AccountsDataGrid.Name = "AccountsDataGrid";
             this.AccountsDataGrid.ReadOnly = true;
             this.AccountsDataGrid.Size = new System.Drawing.Size(513, 431);
             this.AccountsDataGrid.TabIndex = 1;
+            // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataSource = typeof(AutoShop.Models.Account);
             // 
             // ExitTabPage
             // 
@@ -214,141 +406,6 @@ namespace AutoShop.Screens.MainForm
             this.ExitTabPage.TabIndex = 3;
             this.ExitTabPage.Text = "Exit";
             this.ExitTabPage.UseVisualStyleBackColor = true;
-            // 
-            // OrdersDataGrid
-            // 
-            this.OrdersDataGrid.AllowUserToAddRows = false;
-            this.OrdersDataGrid.AllowUserToDeleteRows = false;
-            this.OrdersDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrdersDataGrid.AutoGenerateColumns = false;
-            this.OrdersDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.OrdersDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.OrdersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OrdersDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdOrderCol,
-            this.TypeOrderCol,
-            this.DescOrderCol,
-            this.CompletedOrderCol});
-            this.OrdersDataGrid.DataSource = this.orderBindingSource;
-            this.OrdersDataGrid.Location = new System.Drawing.Point(218, 0);
-            this.OrdersDataGrid.Name = "OrdersDataGrid";
-            this.OrdersDataGrid.ReadOnly = true;
-            this.OrdersDataGrid.Size = new System.Drawing.Size(513, 413);
-            this.OrdersDataGrid.TabIndex = 2;
-            // 
-            // DeleteOrderButton
-            // 
-            this.DeleteOrderButton.Location = new System.Drawing.Point(7, 119);
-            this.DeleteOrderButton.Name = "DeleteOrderButton";
-            this.DeleteOrderButton.Size = new System.Drawing.Size(205, 31);
-            this.DeleteOrderButton.TabIndex = 3;
-            this.DeleteOrderButton.Text = "Delete order";
-            this.DeleteOrderButton.UseVisualStyleBackColor = true;
-            this.DeleteOrderButton.Click += new System.EventHandler(this.DeleteOrderButton_Click);
-            // 
-            // EditOrderButton
-            // 
-            this.EditOrderButton.Location = new System.Drawing.Point(7, 45);
-            this.EditOrderButton.Name = "EditOrderButton";
-            this.EditOrderButton.Size = new System.Drawing.Size(205, 31);
-            this.EditOrderButton.TabIndex = 1;
-            this.EditOrderButton.Text = "Edit order";
-            this.EditOrderButton.UseVisualStyleBackColor = true;
-            this.EditOrderButton.Click += new System.EventHandler(this.EditOrderButton_Click);
-            // 
-            // AddOrderButton
-            // 
-            this.AddOrderButton.Location = new System.Drawing.Point(7, 8);
-            this.AddOrderButton.Name = "AddOrderButton";
-            this.AddOrderButton.Size = new System.Drawing.Size(205, 31);
-            this.AddOrderButton.TabIndex = 0;
-            this.AddOrderButton.Text = "Add new order";
-            this.AddOrderButton.UseVisualStyleBackColor = true;
-            this.AddOrderButton.Click += new System.EventHandler(this.AddOrderButton_Click);
-            // 
-            // CompleteButton
-            // 
-            this.CompleteButton.Location = new System.Drawing.Point(7, 82);
-            this.CompleteButton.Name = "CompleteButton";
-            this.CompleteButton.Size = new System.Drawing.Size(205, 31);
-            this.CompleteButton.TabIndex = 2;
-            this.CompleteButton.Text = "Complete order";
-            this.CompleteButton.UseVisualStyleBackColor = true;
-            this.CompleteButton.Click += new System.EventHandler(this.CompleteButton_Click);
-            // 
-            // DeleteSpareButton
-            // 
-            this.DeleteSpareButton.Location = new System.Drawing.Point(7, 82);
-            this.DeleteSpareButton.Name = "DeleteSpareButton";
-            this.DeleteSpareButton.Size = new System.Drawing.Size(205, 31);
-            this.DeleteSpareButton.TabIndex = 2;
-            this.DeleteSpareButton.Text = "Delete spare";
-            this.DeleteSpareButton.UseVisualStyleBackColor = true;
-            this.DeleteSpareButton.Click += new System.EventHandler(this.DeleteSpareButton_Click);
-            // 
-            // EditSpareButton
-            // 
-            this.EditSpareButton.Location = new System.Drawing.Point(7, 45);
-            this.EditSpareButton.Name = "EditSpareButton";
-            this.EditSpareButton.Size = new System.Drawing.Size(205, 31);
-            this.EditSpareButton.TabIndex = 1;
-            this.EditSpareButton.Text = "Edit spare";
-            this.EditSpareButton.UseVisualStyleBackColor = true;
-            this.EditSpareButton.Click += new System.EventHandler(this.EditSpareButton_Click);
-            // 
-            // AddSpareButton
-            // 
-            this.AddSpareButton.Location = new System.Drawing.Point(7, 8);
-            this.AddSpareButton.Name = "AddSpareButton";
-            this.AddSpareButton.Size = new System.Drawing.Size(205, 31);
-            this.AddSpareButton.TabIndex = 0;
-            this.AddSpareButton.Text = "Add new spare";
-            this.AddSpareButton.UseVisualStyleBackColor = true;
-            this.AddSpareButton.Click += new System.EventHandler(this.AddSpareButton_Click);
-            // 
-            // SparesDataGrid
-            // 
-            this.SparesDataGrid.AllowUserToAddRows = false;
-            this.SparesDataGrid.AllowUserToDeleteRows = false;
-            this.SparesDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SparesDataGrid.AutoGenerateColumns = false;
-            this.SparesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.SparesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.SparesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SparesDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdSpareCol,
-            this.NameSpareCol,
-            this.TypeSpareCol,
-            this.AmountSpareCol});
-            this.SparesDataGrid.DataSource = this.spareBindingSource;
-            this.SparesDataGrid.Location = new System.Drawing.Point(218, 0);
-            this.SparesDataGrid.Name = "SparesDataGrid";
-            this.SparesDataGrid.ReadOnly = true;
-            this.SparesDataGrid.Size = new System.Drawing.Size(513, 431);
-            this.SparesDataGrid.TabIndex = 7;
-            // 
-            // NameSpareCol
-            // 
-            this.NameSpareCol.DataPropertyName = "Name";
-            this.NameSpareCol.Frozen = true;
-            this.NameSpareCol.HeaderText = "Name";
-            this.NameSpareCol.Name = "NameSpareCol";
-            this.NameSpareCol.ReadOnly = true;
-            this.NameSpareCol.Width = 80;
-            // 
-            // AmountSpareCol
-            // 
-            this.AmountSpareCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.AmountSpareCol.DataPropertyName = "Amount";
-            this.AmountSpareCol.Frozen = true;
-            this.AmountSpareCol.HeaderText = "Amount";
-            this.AmountSpareCol.Name = "AmountSpareCol";
-            this.AmountSpareCol.ReadOnly = true;
-            this.AmountSpareCol.Width = 96;
             // 
             // IdAccountCol
             // 
@@ -393,114 +450,11 @@ namespace AutoShop.Screens.MainForm
             // AccessAccountCol
             // 
             this.AccessAccountCol.DataPropertyName = "Access";
+            this.AccessAccountCol.Frozen = true;
             this.AccessAccountCol.HeaderText = "Level Access";
             this.AccessAccountCol.Name = "AccessAccountCol";
             this.AccessAccountCol.ReadOnly = true;
             this.AccessAccountCol.Width = 128;
-            // 
-            // IdOrderCol
-            // 
-            this.IdOrderCol.DataPropertyName = "Id";
-            this.IdOrderCol.HeaderText = "Id";
-            this.IdOrderCol.Name = "IdOrderCol";
-            this.IdOrderCol.ReadOnly = true;
-            this.IdOrderCol.Width = 49;
-            // 
-            // TypeOrderCol
-            // 
-            this.TypeOrderCol.DataPropertyName = "Type";
-            this.TypeOrderCol.HeaderText = "Type";
-            this.TypeOrderCol.Name = "TypeOrderCol";
-            this.TypeOrderCol.ReadOnly = true;
-            this.TypeOrderCol.Width = 71;
-            // 
-            // DescOrderCol
-            // 
-            this.DescOrderCol.DataPropertyName = "Description";
-            this.DescOrderCol.HeaderText = "Description";
-            this.DescOrderCol.Name = "DescOrderCol";
-            this.DescOrderCol.ReadOnly = true;
-            this.DescOrderCol.Width = 123;
-            // 
-            // CompletedOrderCol
-            // 
-            this.CompletedOrderCol.DataPropertyName = "IsCompleted";
-            this.CompletedOrderCol.HeaderText = "Is Completed?";
-            this.CompletedOrderCol.Name = "CompletedOrderCol";
-            this.CompletedOrderCol.ReadOnly = true;
-            this.CompletedOrderCol.Width = 122;
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(AutoShop.Models.Order);
-            // 
-            // IdSpareCol
-            // 
-            this.IdSpareCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.IdSpareCol.DataPropertyName = "Id";
-            this.IdSpareCol.Frozen = true;
-            this.IdSpareCol.HeaderText = "Id";
-            this.IdSpareCol.Name = "IdSpareCol";
-            this.IdSpareCol.ReadOnly = true;
-            this.IdSpareCol.Width = 49;
-            // 
-            // TypeSpareCol
-            // 
-            this.TypeSpareCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TypeSpareCol.DataPropertyName = "Type";
-            this.TypeSpareCol.Frozen = true;
-            this.TypeSpareCol.HeaderText = "Type";
-            this.TypeSpareCol.Name = "TypeSpareCol";
-            this.TypeSpareCol.ReadOnly = true;
-            this.TypeSpareCol.Width = 71;
-            // 
-            // spareBindingSource
-            // 
-            this.spareBindingSource.DataSource = typeof(AutoShop.Models.Spare);
-            // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataSource = typeof(AutoShop.Models.Account);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 49;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
-            this.loginDataGridViewTextBoxColumn.Width = 76;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            this.passwordDataGridViewTextBoxColumn.Width = 109;
-            // 
-            // accessDataGridViewTextBoxColumn
-            // 
-            this.accessDataGridViewTextBoxColumn.DataPropertyName = "Access";
-            this.accessDataGridViewTextBoxColumn.HeaderText = "Access";
-            this.accessDataGridViewTextBoxColumn.Name = "accessDataGridViewTextBoxColumn";
-            this.accessDataGridViewTextBoxColumn.ReadOnly = true;
-            this.accessDataGridViewTextBoxColumn.Width = 86;
             // 
             // MainForm
             // 
@@ -516,13 +470,13 @@ namespace AutoShop.Screens.MainForm
             this.Text = "Auto Shop";
             this.TabControl.ResumeLayout(false);
             this.OrdersTabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.SparesTabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SparesDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spareBindingSource)).EndInit();
             this.AccountsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AccountsDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SparesDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spareBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -564,10 +518,5 @@ namespace AutoShop.Screens.MainForm
         private System.Windows.Forms.DataGridViewTextBoxColumn LoginAccountCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn PasswordAccountCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn AccessAccountCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accessDataGridViewTextBoxColumn;
     }
 }

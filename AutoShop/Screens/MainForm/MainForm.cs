@@ -103,6 +103,10 @@ namespace AutoShop.Screens.MainForm
                 if (accounts.Single((Account acc) => acc.Id == selectedId).Access != Account.LevelAccess.Admin)
                 {
                     Utility.AccountUtility.deleteAccountFromStorage(selectedId);
+                    if (Storage.Storage.getStorage().getState().currentUser.Id == selectedId)
+                    {
+                        TabControl.SelectTab(TabControl.TabCount - 1);
+                    }
                 } else
                 {
                     MessageBox.Show("You cannot delete admins account",
