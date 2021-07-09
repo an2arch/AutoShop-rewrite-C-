@@ -52,17 +52,17 @@ namespace AutoShop.Screens.Auth
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::AutoShop.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(10, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 151);
+            this.pictureBox1.Size = new System.Drawing.Size(289, 151);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // NameLabel
             // 
-            this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameLabel.Location = new System.Drawing.Point(9, 197);
+            this.NameLabel.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameLabel.Location = new System.Drawing.Point(6, 200);
             this.NameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(118, 22);
@@ -73,11 +73,11 @@ namespace AutoShop.Screens.Auth
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SubmitButton.Location = new System.Drawing.Point(10, 292);
-            this.SubmitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubmitButton.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubmitButton.Location = new System.Drawing.Point(13, 305);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(270, 25);
+            this.SubmitButton.Size = new System.Drawing.Size(286, 29);
             this.SubmitButton.TabIndex = 3;
             this.SubmitButton.Text = "Sign in";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -85,19 +85,19 @@ namespace AutoShop.Screens.Auth
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameTextBox.Location = new System.Drawing.Point(131, 197);
-            this.NameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameTextBox.MaxLength = 16;
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(149, 26);
+            this.NameTextBox.Size = new System.Drawing.Size(168, 29);
             this.NameTextBox.TabIndex = 0;
             this.NameTextBox.Visible = false;
             // 
             // LoginLabel
             // 
-            this.LoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LoginLabel.Location = new System.Drawing.Point(9, 224);
+            this.LoginLabel.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LoginLabel.Location = new System.Drawing.Point(6, 233);
             this.LoginLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoginLabel.Name = "LoginLabel";
             this.LoginLabel.Size = new System.Drawing.Size(118, 22);
@@ -107,18 +107,18 @@ namespace AutoShop.Screens.Auth
             // 
             // LoginTextBox
             // 
-            this.LoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LoginTextBox.Location = new System.Drawing.Point(131, 224);
-            this.LoginTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LoginTextBox.Location = new System.Drawing.Point(131, 230);
+            this.LoginTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.LoginTextBox.MaxLength = 16;
             this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(149, 26);
+            this.LoginTextBox.Size = new System.Drawing.Size(168, 29);
             this.LoginTextBox.TabIndex = 1;
             // 
             // PasswordLabel
             // 
-            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PasswordLabel.Location = new System.Drawing.Point(9, 251);
+            this.PasswordLabel.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PasswordLabel.Location = new System.Drawing.Point(6, 266);
             this.PasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(118, 22);
@@ -128,22 +128,22 @@ namespace AutoShop.Screens.Auth
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(131, 251);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PasswordTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PasswordTextBox.Location = new System.Drawing.Point(131, 263);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordTextBox.MaxLength = 16;
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(149, 26);
+            this.PasswordTextBox.Size = new System.Drawing.Size(168, 29);
             this.PasswordTextBox.TabIndex = 2;
             // 
             // SwitchButton
             // 
-            this.SwitchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SwitchButton.Location = new System.Drawing.Point(10, 322);
-            this.SwitchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SwitchButton.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SwitchButton.Location = new System.Drawing.Point(13, 338);
+            this.SwitchButton.Margin = new System.Windows.Forms.Padding(2);
             this.SwitchButton.Name = "SwitchButton";
-            this.SwitchButton.Size = new System.Drawing.Size(269, 25);
+            this.SwitchButton.Size = new System.Drawing.Size(286, 29);
             this.SwitchButton.TabIndex = 4;
             this.SwitchButton.Text = "Register";
             this.SwitchButton.UseVisualStyleBackColor = true;
@@ -152,11 +152,11 @@ namespace AutoShop.Screens.Auth
             // ExitButton
             // 
             this.ExitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExitButton.Location = new System.Drawing.Point(10, 352);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitButton.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExitButton.Location = new System.Drawing.Point(13, 371);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(269, 25);
+            this.ExitButton.Size = new System.Drawing.Size(286, 29);
             this.ExitButton.TabIndex = 5;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -164,8 +164,8 @@ namespace AutoShop.Screens.Auth
             // 
             // Name_Window
             // 
-            this.Name_Window.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Name_Window.Location = new System.Drawing.Point(88, 164);
+            this.Name_Window.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Name_Window.Location = new System.Drawing.Point(88, 167);
             this.Name_Window.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Name_Window.Name = "Name_Window";
             this.Name_Window.Size = new System.Drawing.Size(132, 22);
@@ -177,11 +177,10 @@ namespace AutoShop.Screens.Auth
             // Auth
             // 
             this.AcceptButton = this.SubmitButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.ExitButton;
-            this.ClientSize = new System.Drawing.Size(288, 388);
+            this.ClientSize = new System.Drawing.Size(307, 409);
             this.Controls.Add(this.Name_Window);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.LoginTextBox);
@@ -193,11 +192,12 @@ namespace AutoShop.Screens.Auth
             this.Controls.Add(this.LoginLabel);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.pictureBox1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Auth";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Authentication";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
