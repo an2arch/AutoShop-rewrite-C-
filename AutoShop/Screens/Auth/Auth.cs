@@ -34,6 +34,7 @@ namespace AutoShop.Screens.Auth
             {
                 NameLabel.Hide();
                 NameTextBox.Hide();
+                Name_Window.Text = "Authorization";
                 SubmitButton.Text = "Sign in";
                 SwitchButton.Text = "Register";
             }
