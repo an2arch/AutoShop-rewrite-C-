@@ -17,6 +17,7 @@ namespace AutoShop.Screens.Auth
         public Auth()
         {
             InitializeComponent();
+            Name_Window.Show();
         }
 
         private void SwitchButton_Click(object sender, EventArgs e)
@@ -26,8 +27,9 @@ namespace AutoShop.Screens.Auth
             {
                 NameLabel.Show();
                 NameTextBox.Show();
+                Name_Window.Text = "Registration";
                 SubmitButton.Text = "Sign up";
-                SwitchButton.Text = "Authenticate";
+                SwitchButton.Text = "Back to Authorization";
             } else
             {
                 NameLabel.Hide();
