@@ -17,9 +17,18 @@ namespace AutoShop.Screens.MainForm
             InitializeComponent();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            Storage.Storage storage = Storage.Storage.getStorage();
+            if (storage.getState().currentUser.Access == Account.LevelAccess.Admin)
+            {
+                AddAccountsPage();
+            }
+        }
+
         private void TabControl_Selected(object sender, TabControlEventArgs e)
         {
-            if (TabControl.SelectedTab.Name == "ExitTabPage") {
+            if (TabControl.SelectedTab != null && TabControl.SelectedTab.Name == "ExitTabPage") {
                 Storage.Storage storage = Storage.Storage.getStorage();
                 storage.dispatch(new Storage.Action.Action(
                     Storage.Action.ActionType.CLEAR_CURRENT_USER
@@ -32,6 +41,14 @@ namespace AutoShop.Screens.MainForm
 
                 if (storage.getState().currentUser != null)
                 {
+                    if(storage.getState().currentUser.Access == Account.LevelAccess.Admin)
+                    {
+                        AddAccountsPage();
+                    } else
+                    {
+                        DeleteAccountsPage();
+                    }
+
                     Show();
                     TabControl.SelectTab(0);
                 } else
@@ -220,6 +237,78 @@ namespace AutoShop.Screens.MainForm
                     .ToString()
                     );
                 Utility.SpareUtility.deleteSpareFromStorage(selectedId);
+            }
+        }
+
+        private void AddAccountsPage() 
+        {
+            if (AccountsTabPage == null) 
+            {
+                TabControl.TabPages.Insert(TabControl.TabPages.Count - 1, "Accounts");
+                AccountsTabPage = TabControl.TabPages[TabControl.TabPages.Count - 2];
+
+                AccountsTabPage.SuspendLayout();
+                ((System.ComponentModel.ISupportInitialize)(AccountsDataGrid)).BeginInit();
+                ((System.ComponentModel.ISupportInitialize)(accountBindingSource)).BeginInit();
+
+                // 
+                // AccountsTabPage
+                // 
+                AccountsTabPage.Controls.Add(DeleteAccountButton);
+                AccountsTabPage.Controls.Add(EditAccountButton);
+                AccountsTabPage.Controls.Add(AddAccountButton);
+                AccountsTabPage.Controls.Add(AccountsDataGrid);
+                AccountsTabPage.Location = new System.Drawing.Point(4, 31);
+                AccountsTabPage.Name = "AccountsTabPage";
+                AccountsTabPage.Padding = new System.Windows.Forms.Padding(3);
+                AccountsTabPage.Size = new System.Drawing.Size(731, 431);
+                AccountsTabPage.TabIndex = 2;
+                AccountsTabPage.Text = "Accounts";
+                AccountsTabPage.UseVisualStyleBackColor = true;
+                AccountsTabPage.Enter += new System.EventHandler(AccountsTabPage_Enter);
+                // 
+                // DeleteAccountButton
+                // 
+                DeleteAccountButton.Location = new System.Drawing.Point(7, 82);
+                DeleteAccountButton.Name = "DeleteAccountButton";
+                DeleteAccountButton.Size = new System.Drawing.Size(205, 31);
+                DeleteAccountButton.TabIndex = 2;
+                DeleteAccountButton.Text = "Delete account";
+                DeleteAccountButton.UseVisualStyleBackColor = true;
+                DeleteAccountButton.Click += new System.EventHandler(DeleteAccountButton_Click);
+                // 
+                // EditAccountButton
+                // 
+                EditAccountButton.Location = new System.Drawing.Point(7, 45);
+                EditAccountButton.Name = "EditAccountButton";
+                EditAccountButton.Size = new System.Drawing.Size(205, 31);
+                EditAccountButton.TabIndex = 1;
+                EditAccountButton.Text = "Edit account";
+                EditAccountButton.UseVisualStyleBackColor = true;
+                EditAccountButton.Click += new System.EventHandler(EditAccountButton_Click);
+                // 
+                // AddAccountButton
+                // 
+                AddAccountButton.Location = new System.Drawing.Point(7, 8);
+                AddAccountButton.Name = "AddAccountButton";
+                AddAccountButton.Size = new System.Drawing.Size(205, 31);
+                AddAccountButton.TabIndex = 0;
+                AddAccountButton.Text = "Add new account";
+                AddAccountButton.UseVisualStyleBackColor = true;
+                AddAccountButton.Click += new System.EventHandler(AddAccountButton_Click);
+
+                AccountsTabPage.ResumeLayout(false);
+                ((System.ComponentModel.ISupportInitialize)(AccountsDataGrid)).EndInit();
+                ((System.ComponentModel.ISupportInitialize)(accountBindingSource)).EndInit();
+            }
+        }
+
+        private void DeleteAccountsPage()
+        {
+            if (AccountsTabPage != null)
+            {
+                TabControl.TabPages.Remove(AccountsTabPage);
+                AccountsTabPage = null;
             }
         }
     }

@@ -53,13 +53,12 @@ namespace AutoShop.Screens.MainForm
             this.TypeSpareCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AmountSpareCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.spareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.AccountsTabPage = new System.Windows.Forms.TabPage();
+            this.ExitTabPage = new System.Windows.Forms.TabPage();
             this.DeleteAccountButton = new System.Windows.Forms.Button();
             this.EditAccountButton = new System.Windows.Forms.Button();
             this.AddAccountButton = new System.Windows.Forms.Button();
             this.AccountsDataGrid = new System.Windows.Forms.DataGridView();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ExitTabPage = new System.Windows.Forms.TabPage();
             this.IdAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoginAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +71,6 @@ namespace AutoShop.Screens.MainForm
             this.SparesTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SparesDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spareBindingSource)).BeginInit();
-            this.AccountsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +79,6 @@ namespace AutoShop.Screens.MainForm
             // 
             this.TabControl.Controls.Add(this.OrdersTabPage);
             this.TabControl.Controls.Add(this.SparesTabPage);
-            this.TabControl.Controls.Add(this.AccountsTabPage);
             this.TabControl.Controls.Add(this.ExitTabPage);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.Location = new System.Drawing.Point(0, 0);
@@ -322,80 +319,6 @@ namespace AutoShop.Screens.MainForm
             // 
             this.spareBindingSource.DataSource = typeof(AutoShop.Models.Spare);
             // 
-            // AccountsTabPage
-            // 
-            this.AccountsTabPage.Controls.Add(this.DeleteAccountButton);
-            this.AccountsTabPage.Controls.Add(this.EditAccountButton);
-            this.AccountsTabPage.Controls.Add(this.AddAccountButton);
-            this.AccountsTabPage.Controls.Add(this.AccountsDataGrid);
-            this.AccountsTabPage.Location = new System.Drawing.Point(4, 31);
-            this.AccountsTabPage.Name = "AccountsTabPage";
-            this.AccountsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.AccountsTabPage.Size = new System.Drawing.Size(731, 431);
-            this.AccountsTabPage.TabIndex = 2;
-            this.AccountsTabPage.Text = "Accounts";
-            this.AccountsTabPage.UseVisualStyleBackColor = true;
-            this.AccountsTabPage.Enter += new System.EventHandler(this.AccountsTabPage_Enter);
-            // 
-            // DeleteAccountButton
-            // 
-            this.DeleteAccountButton.Location = new System.Drawing.Point(7, 82);
-            this.DeleteAccountButton.Name = "DeleteAccountButton";
-            this.DeleteAccountButton.Size = new System.Drawing.Size(205, 31);
-            this.DeleteAccountButton.TabIndex = 2;
-            this.DeleteAccountButton.Text = "Delete account";
-            this.DeleteAccountButton.UseVisualStyleBackColor = true;
-            this.DeleteAccountButton.Click += new System.EventHandler(this.DeleteAccountButton_Click);
-            // 
-            // EditAccountButton
-            // 
-            this.EditAccountButton.Location = new System.Drawing.Point(7, 45);
-            this.EditAccountButton.Name = "EditAccountButton";
-            this.EditAccountButton.Size = new System.Drawing.Size(205, 31);
-            this.EditAccountButton.TabIndex = 1;
-            this.EditAccountButton.Text = "Edit account";
-            this.EditAccountButton.UseVisualStyleBackColor = true;
-            this.EditAccountButton.Click += new System.EventHandler(this.EditAccountButton_Click);
-            // 
-            // AddAccountButton
-            // 
-            this.AddAccountButton.Location = new System.Drawing.Point(7, 8);
-            this.AddAccountButton.Name = "AddAccountButton";
-            this.AddAccountButton.Size = new System.Drawing.Size(205, 31);
-            this.AddAccountButton.TabIndex = 0;
-            this.AddAccountButton.Text = "Add new account";
-            this.AddAccountButton.UseVisualStyleBackColor = true;
-            this.AddAccountButton.Click += new System.EventHandler(this.AddAccountButton_Click);
-            // 
-            // AccountsDataGrid
-            // 
-            this.AccountsDataGrid.AllowUserToAddRows = false;
-            this.AccountsDataGrid.AllowUserToDeleteRows = false;
-            this.AccountsDataGrid.AllowUserToOrderColumns = true;
-            this.AccountsDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AccountsDataGrid.AutoGenerateColumns = false;
-            this.AccountsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.AccountsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.AccountsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AccountsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdAccountCol,
-            this.NameAccountCol,
-            this.LoginAccountCol,
-            this.PasswordAccountCol,
-            this.AccessAccountCol});
-            this.AccountsDataGrid.DataSource = this.accountBindingSource;
-            this.AccountsDataGrid.Location = new System.Drawing.Point(218, 0);
-            this.AccountsDataGrid.Name = "AccountsDataGrid";
-            this.AccountsDataGrid.ReadOnly = true;
-            this.AccountsDataGrid.Size = new System.Drawing.Size(513, 431);
-            this.AccountsDataGrid.TabIndex = 1;
-            // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataSource = typeof(AutoShop.Models.Account);
-            // 
             // ExitTabPage
             // 
             this.ExitTabPage.Location = new System.Drawing.Point(4, 31);
@@ -407,54 +330,107 @@ namespace AutoShop.Screens.MainForm
             this.ExitTabPage.Text = "Exit";
             this.ExitTabPage.UseVisualStyleBackColor = true;
             // 
+            // DeleteAccountButton
+            // 
+            this.DeleteAccountButton.Location = new System.Drawing.Point(0, 0);
+            this.DeleteAccountButton.Name = "DeleteAccountButton";
+            this.DeleteAccountButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteAccountButton.TabIndex = 0;
+            // 
+            // EditAccountButton
+            // 
+            this.EditAccountButton.Location = new System.Drawing.Point(0, 0);
+            this.EditAccountButton.Name = "EditAccountButton";
+            this.EditAccountButton.Size = new System.Drawing.Size(75, 23);
+            this.EditAccountButton.TabIndex = 0;
+            // 
+            // AddAccountButton
+            // 
+            this.AddAccountButton.Location = new System.Drawing.Point(0, 0);
+            this.AddAccountButton.Name = "AddAccountButton";
+            this.AddAccountButton.Size = new System.Drawing.Size(75, 23);
+            this.AddAccountButton.TabIndex = 0;
+            // 
+            // AccountsDataGrid
+            // 
+            AccountsDataGrid.AllowUserToAddRows = false;
+            AccountsDataGrid.AllowUserToDeleteRows = false;
+            AccountsDataGrid.AllowUserToOrderColumns = true;
+            AccountsDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            AccountsDataGrid.AutoGenerateColumns = false;
+            AccountsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            AccountsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            AccountsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            AccountsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+                IdAccountCol,
+                NameAccountCol,
+                LoginAccountCol,
+                PasswordAccountCol,
+                AccessAccountCol
+                });
+            AccountsDataGrid.DataSource = accountBindingSource;
+            AccountsDataGrid.Location = new System.Drawing.Point(218, 0);
+            AccountsDataGrid.Name = "AccountsDataGrid";
+            AccountsDataGrid.ReadOnly = true;
+            AccountsDataGrid.Size = new System.Drawing.Size(513, 431);
+            AccountsDataGrid.TabIndex = 1;
+            // 
+            // accountBindingSource
+            // 
+            accountBindingSource.DataSource = typeof(AutoShop.Models.Account);
+
+            // 
             // IdAccountCol
             // 
-            this.IdAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.IdAccountCol.DataPropertyName = "Id";
-            this.IdAccountCol.Frozen = true;
-            this.IdAccountCol.HeaderText = "Id";
-            this.IdAccountCol.Name = "IdAccountCol";
-            this.IdAccountCol.ReadOnly = true;
-            this.IdAccountCol.Width = 49;
+            IdAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            IdAccountCol.DataPropertyName = "Id";
+            IdAccountCol.Frozen = true;
+            IdAccountCol.HeaderText = "Id";
+            IdAccountCol.Name = "IdAccountCol";
+            IdAccountCol.ReadOnly = true;
+            IdAccountCol.Width = 49;
             // 
             // NameAccountCol
             // 
-            this.NameAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.NameAccountCol.DataPropertyName = "Name";
-            this.NameAccountCol.Frozen = true;
-            this.NameAccountCol.HeaderText = "Name";
-            this.NameAccountCol.Name = "NameAccountCol";
-            this.NameAccountCol.ReadOnly = true;
-            this.NameAccountCol.Width = 80;
+            NameAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            NameAccountCol.DataPropertyName = "Name";
+            NameAccountCol.Frozen = true;
+            NameAccountCol.HeaderText = "Name";
+            NameAccountCol.Name = "NameAccountCol";
+            NameAccountCol.ReadOnly = true;
+            NameAccountCol.Width = 80;
             // 
             // LoginAccountCol
             // 
-            this.LoginAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.LoginAccountCol.DataPropertyName = "Login";
-            this.LoginAccountCol.Frozen = true;
-            this.LoginAccountCol.HeaderText = "Login";
-            this.LoginAccountCol.Name = "LoginAccountCol";
-            this.LoginAccountCol.ReadOnly = true;
-            this.LoginAccountCol.Width = 76;
+            LoginAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            LoginAccountCol.DataPropertyName = "Login";
+            LoginAccountCol.Frozen = true;
+            LoginAccountCol.HeaderText = "Login";
+            LoginAccountCol.Name = "LoginAccountCol";
+            LoginAccountCol.ReadOnly = true;
+            LoginAccountCol.Width = 76;
             // 
             // PasswordAccountCol
             // 
-            this.PasswordAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.PasswordAccountCol.DataPropertyName = "Password";
-            this.PasswordAccountCol.Frozen = true;
-            this.PasswordAccountCol.HeaderText = "Password";
-            this.PasswordAccountCol.Name = "PasswordAccountCol";
-            this.PasswordAccountCol.ReadOnly = true;
-            this.PasswordAccountCol.Width = 109;
+            PasswordAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            PasswordAccountCol.DataPropertyName = "Password";
+            PasswordAccountCol.Frozen = true;
+            PasswordAccountCol.HeaderText = "Password";
+            PasswordAccountCol.Name = "PasswordAccountCol";
+            PasswordAccountCol.ReadOnly = true;
+            PasswordAccountCol.Width = 109;
             // 
             // AccessAccountCol
             // 
-            this.AccessAccountCol.DataPropertyName = "Access";
-            this.AccessAccountCol.Frozen = true;
-            this.AccessAccountCol.HeaderText = "Level Access";
-            this.AccessAccountCol.Name = "AccessAccountCol";
-            this.AccessAccountCol.ReadOnly = true;
-            this.AccessAccountCol.Width = 128;
+            AccessAccountCol.DataPropertyName = "Access";
+            AccessAccountCol.Frozen = true;
+            AccessAccountCol.HeaderText = "Level Access";
+            AccessAccountCol.Name = "AccessAccountCol";
+            AccessAccountCol.ReadOnly = true;
+            AccessAccountCol.Width = 128;
+            
             // 
             // MainForm
             // 
@@ -468,6 +444,7 @@ namespace AutoShop.Screens.MainForm
             this.MinimumSize = new System.Drawing.Size(740, 243);
             this.Name = "MainForm";
             this.Text = "Auto Shop";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.TabControl.ResumeLayout(false);
             this.OrdersTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).EndInit();
@@ -475,7 +452,6 @@ namespace AutoShop.Screens.MainForm
             this.SparesTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SparesDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spareBindingSource)).EndInit();
-            this.AccountsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AccountsDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.ResumeLayout(false);
