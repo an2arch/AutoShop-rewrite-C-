@@ -1,16 +1,18 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace AutoShop.Models
 {
     public class Order
     {
-        public Order(string type, string description, bool completed)
+        [JsonConstructor]
+        public Order(string Type, string Description, bool IsCompleted)
         {
             m_id = currentOrderId++;
-            m_type = type;
-            m_description = description;
-            m_isCompleted = completed;
+            m_type = Type;
+            m_description = Description;
+            m_isCompleted = IsCompleted;
         }
 
         public Order(uint id, string type, string description, bool completed)
@@ -30,6 +32,7 @@ namespace AutoShop.Models
         private string m_description;
         private bool m_isCompleted;
 
+        [JsonIgnore]
         public uint Id
         {
             get { return m_id;  }

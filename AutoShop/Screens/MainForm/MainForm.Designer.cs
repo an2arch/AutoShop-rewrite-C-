@@ -58,12 +58,12 @@ namespace AutoShop.Screens.MainForm
             this.EditAccountButton = new System.Windows.Forms.Button();
             this.AddAccountButton = new System.Windows.Forms.Button();
             this.AccountsDataGrid = new System.Windows.Forms.DataGridView();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.IdAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoginAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PasswordAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AccessAccountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabControl.SuspendLayout();
             this.OrdersTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).BeginInit();
@@ -353,84 +353,77 @@ namespace AutoShop.Screens.MainForm
             // 
             // AccountsDataGrid
             // 
-            AccountsDataGrid.AllowUserToAddRows = false;
-            AccountsDataGrid.AllowUserToDeleteRows = false;
-            AccountsDataGrid.AllowUserToOrderColumns = true;
-            AccountsDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.AccountsDataGrid.AllowUserToAddRows = false;
+            this.AccountsDataGrid.AllowUserToDeleteRows = false;
+            this.AccountsDataGrid.AllowUserToOrderColumns = true;
+            this.AccountsDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            AccountsDataGrid.AutoGenerateColumns = false;
-            AccountsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            AccountsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            AccountsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            AccountsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-                IdAccountCol,
-                NameAccountCol,
-                LoginAccountCol,
-                PasswordAccountCol,
-                AccessAccountCol
-                });
-            AccountsDataGrid.DataSource = accountBindingSource;
-            AccountsDataGrid.Location = new System.Drawing.Point(218, 0);
-            AccountsDataGrid.Name = "AccountsDataGrid";
-            AccountsDataGrid.ReadOnly = true;
-            AccountsDataGrid.Size = new System.Drawing.Size(513, 431);
-            AccountsDataGrid.TabIndex = 1;
-            // 
-            // accountBindingSource
-            // 
-            accountBindingSource.DataSource = typeof(AutoShop.Models.Account);
-
+            this.AccountsDataGrid.AutoGenerateColumns = false;
+            this.AccountsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.AccountsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.AccountsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AccountsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdAccountCol,
+            this.NameAccountCol,
+            this.LoginAccountCol,
+            this.PasswordAccountCol,
+            this.AccessAccountCol});
+            this.AccountsDataGrid.DataSource = this.accountBindingSource;
+            this.AccountsDataGrid.Location = new System.Drawing.Point(218, 0);
+            this.AccountsDataGrid.Name = "AccountsDataGrid";
+            this.AccountsDataGrid.ReadOnly = true;
+            this.AccountsDataGrid.Size = new System.Drawing.Size(513, 431);
+            this.AccountsDataGrid.TabIndex = 1;
             // 
             // IdAccountCol
             // 
-            IdAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            IdAccountCol.DataPropertyName = "Id";
-            IdAccountCol.Frozen = true;
-            IdAccountCol.HeaderText = "Id";
-            IdAccountCol.Name = "IdAccountCol";
-            IdAccountCol.ReadOnly = true;
-            IdAccountCol.Width = 49;
+            this.IdAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.IdAccountCol.DataPropertyName = "Id";
+            this.IdAccountCol.Frozen = true;
+            this.IdAccountCol.HeaderText = "Id";
+            this.IdAccountCol.Name = "IdAccountCol";
+            this.IdAccountCol.ReadOnly = true;
             // 
             // NameAccountCol
             // 
-            NameAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            NameAccountCol.DataPropertyName = "Name";
-            NameAccountCol.Frozen = true;
-            NameAccountCol.HeaderText = "Name";
-            NameAccountCol.Name = "NameAccountCol";
-            NameAccountCol.ReadOnly = true;
-            NameAccountCol.Width = 80;
+            this.NameAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.NameAccountCol.DataPropertyName = "Name";
+            this.NameAccountCol.Frozen = true;
+            this.NameAccountCol.HeaderText = "Name";
+            this.NameAccountCol.Name = "NameAccountCol";
+            this.NameAccountCol.ReadOnly = true;
             // 
             // LoginAccountCol
             // 
-            LoginAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            LoginAccountCol.DataPropertyName = "Login";
-            LoginAccountCol.Frozen = true;
-            LoginAccountCol.HeaderText = "Login";
-            LoginAccountCol.Name = "LoginAccountCol";
-            LoginAccountCol.ReadOnly = true;
-            LoginAccountCol.Width = 76;
+            this.LoginAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.LoginAccountCol.DataPropertyName = "Login";
+            this.LoginAccountCol.Frozen = true;
+            this.LoginAccountCol.HeaderText = "Login";
+            this.LoginAccountCol.Name = "LoginAccountCol";
+            this.LoginAccountCol.ReadOnly = true;
             // 
             // PasswordAccountCol
             // 
-            PasswordAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            PasswordAccountCol.DataPropertyName = "Password";
-            PasswordAccountCol.Frozen = true;
-            PasswordAccountCol.HeaderText = "Password";
-            PasswordAccountCol.Name = "PasswordAccountCol";
-            PasswordAccountCol.ReadOnly = true;
-            PasswordAccountCol.Width = 109;
+            this.PasswordAccountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.PasswordAccountCol.DataPropertyName = "Password";
+            this.PasswordAccountCol.Frozen = true;
+            this.PasswordAccountCol.HeaderText = "Password";
+            this.PasswordAccountCol.Name = "PasswordAccountCol";
+            this.PasswordAccountCol.ReadOnly = true;
             // 
             // AccessAccountCol
             // 
-            AccessAccountCol.DataPropertyName = "Access";
-            AccessAccountCol.Frozen = true;
-            AccessAccountCol.HeaderText = "Level Access";
-            AccessAccountCol.Name = "AccessAccountCol";
-            AccessAccountCol.ReadOnly = true;
-            AccessAccountCol.Width = 128;
-            
+            this.AccessAccountCol.DataPropertyName = "Access";
+            this.AccessAccountCol.Frozen = true;
+            this.AccessAccountCol.HeaderText = "Level Access";
+            this.AccessAccountCol.Name = "AccessAccountCol";
+            this.AccessAccountCol.ReadOnly = true;
+            this.AccessAccountCol.Width = 128;
+            // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataSource = typeof(AutoShop.Models.Account);
             // 
             // MainForm
             // 

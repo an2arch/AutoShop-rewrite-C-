@@ -1,16 +1,18 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace AutoShop.Models
 {
     public class Spare
     {
-        public Spare(string name, string type, uint amount)
+        [JsonConstructor]
+        public Spare(string Name, string Type, uint Amount)
         {
             m_id = currentSpareId++;
-            m_name = name;
-            m_type = type;
-            m_amount = amount;
+            m_name = Name;
+            m_type = Type;
+            m_amount = Amount;
         }
 
         public Spare(uint id, string name, string type, uint amount)
@@ -30,6 +32,7 @@ namespace AutoShop.Models
         private string m_type;
         private uint m_amount;
 
+        [JsonIgnore]
         public uint Id
         {
             get { return m_id;  }

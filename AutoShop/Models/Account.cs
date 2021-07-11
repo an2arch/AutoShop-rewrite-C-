@@ -1,17 +1,19 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace AutoShop.Models
 {
     public class Account
     {
-        public Account(string newName, string newLogin, string newPassword, LevelAccess access)
+        [JsonConstructor]
+        public Account(string Name, string Login, string Password, LevelAccess Access)
         {
             m_id = currentAccountId++;
-            m_name = newName;
-            m_login = newLogin;
-            m_password = newPassword;
-            m_levelAccess = access;
+            m_name = Name;
+            m_login = Login;
+            m_password = Password;
+            m_levelAccess = Access;
         }
 
         public Account(uint id, string newName, string newLogin, string newPassword, LevelAccess access)
@@ -38,6 +40,7 @@ namespace AutoShop.Models
         private string m_password;
         private LevelAccess m_levelAccess;
 
+        [JsonIgnore]
         public uint Id
         {
             get { return m_id; }

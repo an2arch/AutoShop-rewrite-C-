@@ -2,17 +2,34 @@
 using System.Runtime.InteropServices;
 using System.Linq;
 using AutoShop.Models;
+using System.IO;
+using System.Text.Json;
 
 namespace AutoShop.Storage
 {
     class Storage
     {
         private static Storage instance;
-        private State.State state = new State.State();
+        public State.State state = new State.State();
+
+        private string filePath = "state.json";
 
         private Storage() {
-            Account admin = new Account("Admin", "admin", "admin", Account.LevelAccess.Admin);
-            state.accounts.Add(admin);
+            if (File.Exists(filePath))
+            {
+                string jsonFile = File.ReadAllText(filePath);
+                state = JsonSerializer.Deserialize<State.State>(jsonFile);
+            } else
+            {
+                Account admin = new Account("Admin", "admin", "admin", Account.LevelAccess.Admin);
+                state.accounts.Add(admin);
+            }
+        }
+
+        ~Storage()
+        {
+            string json = JsonSerializer.Serialize(state);
+            File.WriteAllText(filePath, json);
         }
 
         public static Storage getStorage()

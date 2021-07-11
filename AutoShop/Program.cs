@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Text.Json;
 using System.Windows.Forms;
 
 using AutoShop.Screens.Auth;
@@ -17,14 +19,24 @@ namespace AutoShop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Auth());
+            /*
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                // IgnoreNullValues = true,
+            };
+            */
 
             Storage.Storage storage = Storage.Storage.getStorage();
+
+            Application.Run(new Auth());
+
 
             if (storage.getState().currentUser != null)
             {
                 Application.Run(new MainForm());
             }
+
         }
     }
 }
