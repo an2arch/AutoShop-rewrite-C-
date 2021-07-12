@@ -50,7 +50,7 @@ namespace AutoShop.Screens.MainForm.PopUps.OrderPopUp
             // 
             this.DescTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DescTextBox.Location = new System.Drawing.Point(158, 44);
-            this.DescTextBox.MaxLength = 16;
+            this.DescTextBox.MaxLength = 20;
             this.DescTextBox.Name = "DescTextBox";
             this.DescTextBox.Size = new System.Drawing.Size(214, 29);
             this.DescTextBox.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace AutoShop.Screens.MainForm.PopUps.OrderPopUp
             // 
             this.TypeTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TypeTextBox.Location = new System.Drawing.Point(158, 9);
-            this.TypeTextBox.MaxLength = 16;
+            this.TypeTextBox.MaxLength = 20;
             this.TypeTextBox.Name = "TypeTextBox";
             this.TypeTextBox.Size = new System.Drawing.Size(214, 29);
             this.TypeTextBox.TabIndex = 0;

@@ -61,25 +61,25 @@ namespace AutoShop.Screens.MainForm.PopUps.AccountPopUp
             this.AccessDropMenu.MaxDropDownItems = 2;
             this.AccessDropMenu.Name = "AccessDropMenu";
             this.AccessDropMenu.Size = new System.Drawing.Size(214, 30);
-            this.AccessDropMenu.TabIndex = 11;
+            this.AccessDropMenu.TabIndex = 3;
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PasswordTextBox.Location = new System.Drawing.Point(158, 79);
-            this.PasswordTextBox.MaxLength = 16;
+            this.PasswordTextBox.MaxLength = 20;
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(214, 29);
-            this.PasswordTextBox.TabIndex = 10;
+            this.PasswordTextBox.TabIndex = 2;
             // 
             // LoginTextBox
             // 
             this.LoginTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LoginTextBox.Location = new System.Drawing.Point(158, 44);
-            this.LoginTextBox.MaxLength = 16;
+            this.LoginTextBox.MaxLength = 20;
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(214, 29);
-            this.LoginTextBox.TabIndex = 9;
+            this.LoginTextBox.TabIndex = 1;
             // 
             // AccessLabel
             // 
@@ -95,10 +95,10 @@ namespace AutoShop.Screens.MainForm.PopUps.AccountPopUp
             // 
             this.NameTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameTextBox.Location = new System.Drawing.Point(158, 9);
-            this.NameTextBox.MaxLength = 16;
+            this.NameTextBox.MaxLength = 20;
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(214, 29);
-            this.NameTextBox.TabIndex = 8;
+            this.NameTextBox.TabIndex = 0;
             // 
             // PasswordLabel
             // 

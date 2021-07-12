@@ -88,7 +88,7 @@ namespace AutoShop.Screens.Auth
             this.NameTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameTextBox.Location = new System.Drawing.Point(131, 197);
             this.NameTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.NameTextBox.MaxLength = 16;
+            this.NameTextBox.MaxLength = 20;
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(168, 29);
             this.NameTextBox.TabIndex = 0;
@@ -110,7 +110,7 @@ namespace AutoShop.Screens.Auth
             this.LoginTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LoginTextBox.Location = new System.Drawing.Point(131, 230);
             this.LoginTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.LoginTextBox.MaxLength = 16;
+            this.LoginTextBox.MaxLength = 20;
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(168, 29);
             this.LoginTextBox.TabIndex = 1;
@@ -131,7 +131,7 @@ namespace AutoShop.Screens.Auth
             this.PasswordTextBox.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PasswordTextBox.Location = new System.Drawing.Point(131, 263);
             this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PasswordTextBox.MaxLength = 16;
+            this.PasswordTextBox.MaxLength = 20;
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(168, 29);
