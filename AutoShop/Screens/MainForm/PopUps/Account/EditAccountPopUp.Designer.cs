@@ -60,7 +60,7 @@ namespace AutoShop.Screens.MainForm.PopUps.AccountPopUp
             this.AccessDropMenu.Location = new System.Drawing.Point(158, 115);
             this.AccessDropMenu.MaxDropDownItems = 2;
             this.AccessDropMenu.Name = "AccessDropMenu";
-            this.AccessDropMenu.Size = new System.Drawing.Size(214, 30);
+            this.AccessDropMenu.Size = new System.Drawing.Size(214, 35);
             this.AccessDropMenu.TabIndex = 3;
             // 
             // PasswordTextBox
@@ -69,7 +69,7 @@ namespace AutoShop.Screens.MainForm.PopUps.AccountPopUp
             this.PasswordTextBox.Location = new System.Drawing.Point(158, 79);
             this.PasswordTextBox.MaxLength = 20;
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(214, 29);
+            this.PasswordTextBox.Size = new System.Drawing.Size(214, 35);
             this.PasswordTextBox.TabIndex = 2;
             // 
             // LoginTextBox
@@ -78,7 +78,7 @@ namespace AutoShop.Screens.MainForm.PopUps.AccountPopUp
             this.LoginTextBox.Location = new System.Drawing.Point(158, 44);
             this.LoginTextBox.MaxLength = 20;
             this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(214, 29);
+            this.LoginTextBox.Size = new System.Drawing.Size(214, 35);
             this.LoginTextBox.TabIndex = 1;
             // 
             // AccessLabel
@@ -97,7 +97,7 @@ namespace AutoShop.Screens.MainForm.PopUps.AccountPopUp
             this.NameTextBox.Location = new System.Drawing.Point(158, 9);
             this.NameTextBox.MaxLength = 20;
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(214, 29);
+            this.NameTextBox.Size = new System.Drawing.Size(214, 35);
             this.NameTextBox.TabIndex = 0;
             // 
             // PasswordLabel
@@ -148,7 +148,7 @@ namespace AutoShop.Screens.MainForm.PopUps.AccountPopUp
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "EditAccountPopUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "EditAccountPopUp";
+            this.Text = "Edit Account";
             this.ResumeLayout(false);
             this.PerformLayout();
 
