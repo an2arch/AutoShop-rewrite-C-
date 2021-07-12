@@ -19,14 +19,6 @@ namespace AutoShop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            /*
-            var options = new JsonSerializerOptions
-            {
-                WriteIndented = true,
-                // IgnoreNullValues = true,
-            };
-            */
-
             Storage.Storage storage = Storage.Storage.getStorage();
 
             Application.Run(new Auth());
